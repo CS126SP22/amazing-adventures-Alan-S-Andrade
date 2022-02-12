@@ -1,0 +1,285 @@
+{
+  "startingRoom": "Entrance Courtyard",
+  "endingRoom": "Room Of Requirement",
+  "rooms": [
+    {
+      "name": "Entrance Courtyard",
+      "description": "You are on the Entrance Courtyard, outside Hogwarts Castle.\nYou can go north to the Entrance Hall from here.",
+      "directions": [
+        {
+          "directionName": "North",
+          "room": "Entrance Hall"
+        }
+      ]
+    },
+    {
+      "name": "Entrance Hall",
+      "description": "You are in the Entrance Hall.\nYou see see the Great Hall to the north, the Entrance Courtyard to the south, and the Trophy Room to the east.",
+      "directions": [
+        {
+          "directionName": "North",
+          "room": "Great Hall"
+        },
+        {
+          "directionName": "South",
+          "room": "Entrance Courtyard"
+        },
+        {
+          "directionName": "East",
+          "room": "Trophy Room"
+        }
+      ]
+    },
+    {
+      "name": "Trophy Room",
+      "description": "You are in the Trophy Room. You may grab one of your many Quidditch trophies.\nYou can see Umbridge's Office to the north, Entrance Hall, and the Quidditch Field south from here.",
+      "directions": [
+        {
+          "directionName": "South",
+          "room": "Quidditch Field"
+        },
+        {
+          "directionName": "North",
+          "room": "Umbridge's Office"
+        },
+        {
+          "directionName": "West",
+          "room": "Entrance Hall"
+        }
+      ],
+      "itemsHere": [
+        {
+          "itemName": "Quidditch Trophy"
+        }
+      ]
+    },
+    {
+      "name": "Umbridge's Office",
+      "description": "Oh no! You are in Headmaster Umbrige's Office.\nShe decided to confiscate all the items you have and send you back to the Entrance Courtyard.",
+      "directions": [
+        {
+          "directionName": "Back",
+          "room":"Entrance Courtyard"
+        }
+      ]
+    },
+    {
+      "name":"Quidditch Field",
+      "description": "You are in the Quidditch Field. You can try and catch the snitch!\nYou can see the Viaduct to the north, the Trophy room, and the Owlery west from here.",
+      "directions": [
+        {
+          "directionName": "South",
+          "room": "Trophy Room"
+        },
+        {
+          "directionName": "North",
+          "room": "Viaduct"
+        },
+        {
+          "directionName": "West",
+          "room": "Owlery"
+        }
+      ],
+      "itemsHere": [
+        {
+          "itemName":"Snitch"
+        }
+      ]
+    },
+    {
+      "name":"Viaduct",
+      "description": "You are in the Viaduct, you hear the water running through.\nYou can see the Quidditch Field south from here and the Great Hall to the east.",
+      "directions": [
+        {
+          "directionName": "South",
+          "room": "Quidditch Field"
+        },
+        {
+          "directionName": "East",
+          "room": "Great Hall"
+        }
+      ]
+    },
+    {
+      "name": "Owlery",
+      "description": "You are in the Owlery. You never now when an Owl might be useful!\nYou can see the Quidditch Field to the east.",
+      "directions":[
+        {
+          "directionName": "East",
+          "room": "Quidditch Field"
+        }
+      ],
+      "itemsHere": [
+        {
+          "itemName": "Owl"
+        }
+      ]
+    },
+    {
+      "name": "Great Hall",
+      "description": "You are in the Great Hall. Sit down and feast! You may want to grab some food for a potion.\nYou can see the Entrance Hall, the Clock Tower north, and the Viaduct to the west.",
+      "directions": [
+        {
+          "directionName": "South",
+          "room": "Entrance Hall"
+        },
+        {
+          "directionName": "North",
+          "room": "Clock Tower"
+        },
+        {
+          "directionName": "West",
+          "room": "Viaduct"
+        }
+      ],
+      "itemsHere": [
+        {
+          "itemName": "Banana"
+        },
+        {
+          "itemName": "Frog"
+        },
+        {
+          "itemName": "Salt"
+        },
+        {
+          "itemName": "Cat"
+        }
+      ]
+    },
+    {
+      "name": "Clock Tower",
+      "description": "You are in the Clock Tower.\nYou can see the Great Hall, the Divination room to the east, and the Stone Bridge to the north",
+      "directions": [
+        {
+          "directionName": "South",
+          "room": "Entrance Hall"
+        },
+        {
+          "directionName": "East",
+          "room": "Divination Room"
+        },
+        {
+          "directionName": "Stone Bridge",
+          "room": "North"
+        }
+      ]
+    },
+    {
+      "name": "Divination Room",
+      "description": "You are in the Divination Room. Try to see what your future holds!\nYou can go west to the Clock Tower or north to the Stone Bridge",
+      "directions": [
+        {
+          "directionName": "West",
+          "room": "Clock Tower"
+        },
+        {
+          "directionName": "North",
+          "room": "Stone Bridge"
+        }
+      ]
+    },
+    {
+      "name": "Stone Bridge",
+      "description": "You are in the Stone Bridge.\nYou can see Herbology north from here and the Divination room towards the south.",
+      "directions": [
+        {
+          "directionName": "North",
+          "room": "Herbology"
+        },
+        {
+          "directionName": "South",
+          "room": "Divination Room"
+        }
+      ]
+    },
+    {
+      "name": "Herbology",
+      "description": "You are in Herbology, you may pick up herbs for brewing a potion.\nYou can go the Boy's Dormitory up here, the Potions room east from here, or Stone Bridge south.",
+      "directions": [
+        {
+          "directionName": "Up",
+          "room": "Boy's Dormitory"
+        },
+        {
+          "directionName": "South",
+          "room": "Stone Bridge"
+        },
+        {
+          "directionName": "East",
+          "room": "Potions Room"
+        }
+      ],
+      "itemsHere": [
+        {
+          "item": "Basil"
+        },
+        {
+          "item": "Oregano"
+        },
+        {
+          "item": "Rosemary"
+        },
+        {
+          "item": "Parsley"
+        }
+      ]
+    },
+    {
+      "name": "Boy's Dormitory",
+      "description": "You are in the Boy's Dormitory, you may pick up some of your friends to come along with you.\nYou can see the Great Hall up the stairs and Herbology down the stairs",
+      "directions": [
+        {
+          "directionName": "Up",
+          "room": "Great Hall"
+        },
+        {
+          "directionName": "Down",
+          "name": "Herbology"
+        }
+      ],
+      "itemsHere": [
+        {
+          "item": "Friends"
+        }
+      ]
+    },
+    {
+      "name": "Potions Room",
+      "description": "You are in the room of Potions.\nYou can brew yourself a Revealing Potion if you have a frog and a Basil plant.\nYou can see the Room of Requirement down from here and the Herbology westward.",
+      "directions": [
+        {
+          "directionName": "Down",
+          "room": "Room Of Requirement Door"
+        },
+        {
+          "directionName": "Herbology",
+          "room": "West"
+        }
+      ],
+      "itemsHere": [
+        {
+          "item": "Revealing Potion"
+        }
+      ]
+    },
+    {
+      "name": "Room Of Requirement Door",
+      "description": "This is the entrance to the Door of Requirement.\nThe Room of requirement shall only be available to those who are winners, revealers, and united.\nDo you have all of these items? If so you may enter.\nElse, go back to the Potions Room up from here.",
+      "directions": [
+        {
+          "directionName": "Up",
+          "room": "Potions Room"
+        },
+        {
+          "directionName": "Forward",
+          "room": "Room Of Requirement"
+        }
+      ]
+    },
+    {
+      "name": "Room Of Requirement",
+      "description": "Huzzah! You made it to the secret Room of Requirement.\nYou and your friends may train here to save Hogwarts.\nCongratulations!"
+    }
+  ]
+}
