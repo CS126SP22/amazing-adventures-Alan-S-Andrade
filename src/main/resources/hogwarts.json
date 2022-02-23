@@ -10,7 +10,11 @@
           "directionName": "North",
           "room": "Entrance Hall"
         }
-      ]
+      ],
+      "items": [
+      ],
+      "imageURL": "https://hogwarts4dhome.files.wordpress.com/2020/09/352-transfiguration-courtyard.png",
+      "videoURL": "https://www.youtube.com/watch?v=nrFJ0xf8s04"
     },
     {
       "name": "Entrance Hall",
@@ -28,7 +32,11 @@
           "directionName": "East",
           "room": "Trophy Room"
         }
-      ]
+      ],
+      "items": [
+      ],
+      "imageURL": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/hostedimages/1382307448i/5806069.jpg",
+      "videoURL": "https://www.youtube.com/watch?v=ipq1xsAOdGw"
     },
     {
       "name": "Trophy Room",
@@ -47,11 +55,13 @@
           "room": "Entrance Hall"
         }
       ],
-      "itemsHere": [
+      "items": [
         {
-          "itemName": "Quidditch Trophy"
+          "name": "Quidditch Trophy"
         }
-      ]
+      ],
+      "imageURL": "https://static.wikia.nocookie.net/harrypotter/images/7/71/Trophy_Room1.jpg/revision/latest/scale-to-width-down/235?cb=20100211221957",
+      "videoURL": "https://www.youtube.com/watch?v=mcMjdSk9EfY"
     },
     {
       "name": "Umbridge's Office",
@@ -61,7 +71,11 @@
           "directionName": "Back",
           "room":"Entrance Courtyard"
         }
-      ]
+      ],
+      "items": [
+      ],
+      "imageURL": "https://images.ctfassets.net/usf1vwtuqyxm/1O29yImCdKS8AaqQUgkc6A/67cd680cfe058a2c04aee36efd2c2b97/DoloresUmbridge_WB_F5_UmbridgeAtHerDesk_Still_080615_Land.jpg",
+      "videoURL": "https://www.youtube.com/watch?v=m9KVeL8zfhM"
     },
     {
       "name":"Quidditch Field",
@@ -80,11 +94,13 @@
           "room": "Owlery"
         }
       ],
-      "itemsHere": [
+      "items": [
         {
-          "itemName":"Snitch"
+          "name":"Snitch"
         }
-      ]
+      ],
+      "imageURL": "https://static.wikia.nocookie.net/harrypotter/images/b/b2/Quidditchpitch.jpg/revision/latest?cb=20160723002056",
+      "videoURL": "https://www.youtube.com/watch?v=1A6z7R-aaDw"
     },
     {
       "name":"Viaduct",
@@ -98,7 +114,11 @@
           "directionName": "East",
           "room": "Great Hall"
         }
-      ]
+      ],
+      "items": [
+      ],
+      "imageURL": "https://i0.wp.com/aglobewelltravelled.com/wp-content/uploads/2018/10/IMG_7118-1024x789.jpg?resize=1024%2C789&ssl=1",
+      "videoURL": "https://www.youtube.com/watch?v=Qdq0ffcd1BI"
     },
     {
       "name": "Owlery",
@@ -109,11 +129,13 @@
           "room": "Quidditch Field"
         }
       ],
-      "itemsHere": [
+      "items": [
         {
-          "itemName": "Owl"
+          "name": "Owl"
         }
-      ]
+      ],
+      "imageURL": "https://static.wikia.nocookie.net/harrypotter/images/2/26/Owlery.jpg/revision/latest/scale-to-width-down/220?cb=20170102050154",
+      "videoURL": "https://www.youtube.com/watch?v=rsdduHrUmFs"
     },
     {
       "name": "Great Hall",
@@ -132,7 +154,7 @@
           "room": "Viaduct"
         }
       ],
-      "itemsHere": [
+      "items": [
         {
           "itemName": "Banana"
         },
@@ -145,7 +167,9 @@
         {
           "itemName": "Cat"
         }
-      ]
+      ],
+      "imageURL": "https://imgix.bustle.com/rehost/2016/11/12/6efc6cdb-c13c-4af0-ad4d-d5fec7ae5fa0.png?w=800&fit=crop&crop=faces&auto=format%2Ccompress",
+      "videoURL": "https://www.youtube.com/watch?v=5Z3dti1QhHA"
     },
     {
       "name": "Clock Tower",
@@ -163,7 +187,11 @@
           "directionName": "Stone Bridge",
           "room": "North"
         }
-      ]
+      ],
+      "items": [
+      ],
+      "imageURL": "https://static.wikia.nocookie.net/harrypotter/images/4/45/Clocktower.jpg/revision/latest?cb=20080704152019",
+      "videoURL": "https://www.youtube.com/watch?v=lqTLETOYkQg"
     },
     {
       "name": "Divination Room",
@@ -177,7 +205,11 @@
           "directionName": "North",
           "room": "Stone Bridge"
         }
-      ]
+      ],
+      "items": [
+      ],
+      "imageURL": "https://static.wikia.nocookie.net/harrypotter/images/4/40/DivinationHarryRon.jpg/revision/latest?cb=20161207020758",
+      "videoURL": "https://www.youtube.com/watch?v=HEJGXMyLxvI"
     },
     {
       "name": "Stone Bridge",
@@ -191,7 +223,11 @@
           "directionName": "South",
           "room": "Divination Room"
         }
-      ]
+      ],
+      "items": [
+      ],
+      "imageURL": "https://static.wikia.nocookie.net/harrypotter/images/9/9c/Covered_bridge_GOF_2.jpg/revision/latest?cb=20090617225343",
+      "videoURL": "https://www.youtube.com/watch?v=hMar19zJOhI"
     },
     {
       "name": "Herbology",
@@ -210,20 +246,22 @@
           "room": "Potions Room"
         }
       ],
-      "itemsHere": [
+      "items": [
         {
-          "item": "Basil"
+          "name": "Basil"
         },
         {
-          "item": "Oregano"
+          "name": "Oregano"
         },
         {
-          "item": "Rosemary"
+          "name": "Rosemary"
         },
         {
-          "item": "Parsley"
+          "name": "Parsley"
         }
-      ]
+      ],
+      "imageURL": "https://static.wikia.nocookie.net/harrypotter/images/5/54/Professor_Sprout_greenhouse_1.png/revision/latest?cb=20131206031901",
+      "videoURL": "https://www.youtube.com/watch?v=G17jQg_pUJg"
     },
     {
       "name": "Boy's Dormitory",
@@ -238,11 +276,13 @@
           "name": "Herbology"
         }
       ],
-      "itemsHere": [
+      "items": [
         {
-          "item": "Friends"
+          "name": "Friends"
         }
-      ]
+      ],
+      "imageURL": "https://static3.srcdn.com/wordpress/wp-content/uploads/2018/12/gryffindor-common-room.jpg?q=50&fit=crop&w=740&h=389&dpr=1.5",
+      "videoURL": "https://www.youtube.com/watch?v=wpOc-Yqvp-c"
     },
     {
       "name": "Potions Room",
@@ -257,11 +297,13 @@
           "room": "West"
         }
       ],
-      "itemsHere": [
+      "items": [
         {
-          "item": "Revealing Potion"
+          "name": "Revealing Potion"
         }
-      ]
+      ],
+      "imageURL": "https://live.staticflickr.com/3831/9531350516_530b80ace7_b.jpg",
+      "videoURL": "https://www.youtube.com/watch?v=uc6-2z4e9oA"
     },
     {
       "name": "Room Of Requirement Door",
@@ -275,11 +317,21 @@
           "directionName": "Forward",
           "room": "Room Of Requirement"
         }
-      ]
+      ],
+      "items": [
+      ],
+      "imageURL": "https://harrypotterinexeter.files.wordpress.com/2017/08/188a56ece3108fc40309e0bf83ef0cb1-the-doors-place.jpg?w=723",
+      "videoURL": "https://www.youtube.com/watch?v=C6n6twcZa-Y"
     },
     {
       "name": "Room Of Requirement",
-      "description": "Huzzah! You made it to the secret Room of Requirement.\nYou and your friends may train here to save Hogwarts.\nCongratulations!"
+      "description": "Huzzah! You made it to the secret Room of Requirement.\nYou and your friends may train here to save Hogwarts.\nCongratulations!",
+      "directions": [
+      ],
+      "items": [
+      ],
+      "imageURL": "https://images.ctfassets.net/usf1vwtuqyxm/4TZMj6pWm4KM0WM6MWscKA/00236a9fcadc2a790567a210e5146712/WB_F5_Dumbledores_army_HP5D-2921.jpg",
+      "videoURL": "https://www.youtube.com/watch?v=ygtI3nRJeO0"
     }
   ]
 }

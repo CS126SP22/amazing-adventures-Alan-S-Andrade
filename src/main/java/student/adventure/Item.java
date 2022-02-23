@@ -1,16 +1,20 @@
 package student.adventure;
 
-import com.google.gson.annotations.SerializedName;
-
+/** Stores data about a game Item. */
 public class Item {
-    @SerializedName("itemName")
-    private String itemName;
+    private String name;
 
-    public Item(String newItemName) {
-        itemName = newItemName;
+    /** @param setName Name of the item as a String */
+    public Item(String setName) {
+        name = setName;
+    }
+    /** @return name of the item as a String*/
+    public String getName() {
+        return name;
     }
 
-    public String getItemName() {
-        return itemName;
+    @Override
+    public String toString() {
+        return name;
     }
 }
