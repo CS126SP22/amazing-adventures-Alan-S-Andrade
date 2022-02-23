@@ -17,7 +17,7 @@ public class GameTest {
     public void setUp() {
         newGame =
                 GameLoader.loadGameFromJsonFile(
-                        "C:\\Users\\ethan\\Documents\\School\\CS126\\AdventureGame\\src\\main\\resources\\rich.json");
+                        "C:\\Users\\Alan\\IdeaProjects\\amazing-adventures-Alan-S-Andrade\\src\\main\\resources\\hogwarts.json");
         gameEngine = new GameEngine(newGame);
     }
 

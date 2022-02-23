@@ -7,6 +7,9 @@ import java.io.IOException;
 
 @Path("/")
 public class AdventureResource {
+    /**
+     * The single static adventure service instance used for this API.
+     */
     private static AdventureService service = new HogwartsService();
 
     /**
@@ -16,6 +19,7 @@ public class AdventureResource {
     @GET
     @Path("ping")
     public String ping() {
+        // TODO: This method should return `pong`.
         return "pong";
     }
 
@@ -112,4 +116,5 @@ public class AdventureResource {
                 .entity(new Error("No game found with id '" + id + "'."))
                 .build();
     }
+
 }

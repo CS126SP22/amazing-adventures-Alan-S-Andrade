@@ -83,8 +83,6 @@ public final class GameLoader {
             }
 
             checkDescription(room);
-            checkDirections(room, rooms);
-            checkItems(room);
         }
         if (noEndingRoom || noStartingRoom) {
             System.out.println("either starting or ending room not in room list");
@@ -101,53 +99,6 @@ public final class GameLoader {
         if (description == null) {
             System.out.println("null room description somewhere");
             throw new IllegalArgumentException();
-        }
-    }
-
-    /**
-     * Checks that there is at least one direction and it doesn't have null fields
-     * @param currentRoom object
-     */
-    private static void checkDirections(Room currentRoom, List<Room> rooms) {
-        int numDirections = currentRoom.getDirections().size();
-        if (numDirections < 1) {
-            System.out.println("less than one direction");
-            throw new IllegalArgumentException();
-        }
-
-        for (Directions direction : currentRoom.getDirections()) {
-            //Makes sure that all the direction's fields are not null.
-            if (direction.getDirectionName() == null || direction.getRoom() == null) {
-                System.out.println("a direction or room field is null");
-                throw new NullPointerException();
-            }
-            //Makes sure direction goes to an existent room
-            boolean directionIsValid = false;
-            for (Room room : rooms) {
-                if (direction.getRoom().equals(room.getName())) {
-                    directionIsValid = true;
-                }
-            }
-            if (!directionIsValid) {
-                System.out.println("a direction leads nowhere");
-                throw new IllegalArgumentException();
-            }
-        }
-    }
-
-    /**
-     * Checks if there are items and that they are not null
-     * @param room object
-     */
-    private static void checkItems(Room room) {
-        //Also checks if there is no item list
-        if ((room.getItems().size()) != 0) {
-            for (Item item : room.getItems()) {
-                if (item.getName() == null) {
-                    System.out.println("there is a null item");
-                    throw new NullPointerException();
-                }
-            }
         }
     }
 }

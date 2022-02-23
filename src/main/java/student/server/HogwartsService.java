@@ -58,7 +58,6 @@ public class HogwartsService implements AdventureService {
         userInput.processCommand(currentGame);
     }
 
-    //Not needed for this assignment.
     @Override
     public SortedMap<String, Integer> fetchLeaderboard() {
         return null;

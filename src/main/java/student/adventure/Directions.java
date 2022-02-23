@@ -1,25 +1,22 @@
 package student.adventure;
 
-import com.google.gson.annotations.SerializedName;
+import java.util.List;
 
+/** Stores Direction data from the game. */
 public class Directions {
-    @SerializedName("directionName")
     private String directionName;
-    @SerializedName("room")
     private String room;
 
-    public Directions(String newDirectionName, String newRoom) {
-        directionName = newDirectionName;
-        room = newRoom;
-    }
-
+    /** @return direction name as a String */
     public String getDirectionName() {
         return directionName;
     }
 
+    /** @return Room String */
     public String getRoom() {
         return room;
     }
+
     @Override
     public String toString() {
         return directionName;
