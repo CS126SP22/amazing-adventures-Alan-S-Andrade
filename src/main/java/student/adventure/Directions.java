@@ -20,8 +20,4 @@ public class Directions {
     public String getRoom() {
         return room;
     }
-    @Override
-    public String toString() {
-        return directionName;
-    }
 }

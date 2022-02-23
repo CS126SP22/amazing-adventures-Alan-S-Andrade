@@ -1,6 +1,5 @@
 package student.server;
 
-import java.io.IOException;
 import java.util.SortedMap;
 
 /**
@@ -16,7 +15,7 @@ public interface AdventureService {
      * Creates a new Adventure game and stores it.
      * @return the id of the game.
      */
-    int newGame() throws AdventureException, IOException;
+    int newGame() throws AdventureException;
 
     /**
      * Returns the state of the game instance associated with the given ID.

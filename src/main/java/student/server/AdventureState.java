@@ -16,25 +16,8 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
  */
 @JsonSerialize
 public class AdventureState {
-    private String roomHistory;
-    private String inventory;
-
-    /**
-     * @param inventory the current inventory in the game engine.
-     * @param roomHistory the current roomHistory in the game engine.
-     */
-    public AdventureState(String inventory, String roomHistory) {
-        this.inventory = inventory;
-        this.roomHistory = roomHistory;
-    }
-
-    /** @return the current room history */
-    public String getRoomHistory() {
-        return roomHistory;
-    }
-
-    /** @return current inventory */
-    public String getInventory() {
-        return inventory;
-    }
+    // TODO: Add any additional state your game needs to this object.
+    // E.g.: If your game needs to display a life total, you could add:
+    // private int lifeTotal;
+    // ...and whatever constructor/getters/setters you'd need
 }
