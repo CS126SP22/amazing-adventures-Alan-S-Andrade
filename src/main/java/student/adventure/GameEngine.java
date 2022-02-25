@@ -101,7 +101,7 @@ public class GameEngine {
      */
     private String setWinner() {
         gameIsOver = true;
-        String message = "Congratulations! You have become rich! You win at life!";
+        String message = "Congratulations! Here you can practice magic!";
         setCurrentGameStatus(message);
         return message;
     }

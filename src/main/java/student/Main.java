@@ -12,8 +12,7 @@ public class Main {
     public static void main(String[] args) throws IOException {
         GameLoader gameLoader = new GameLoader();
         Game newGame = gameLoader.loadGameFromJsonFile("src/main/resources/hogwarts.json");
-        HttpServer server = AdventureServer.createServer(AdventureResource.class);
-        server.start();
+        newGame.start();
 //        newGame.start();
     }
 }

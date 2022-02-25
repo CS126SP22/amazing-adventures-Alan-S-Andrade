@@ -19,7 +19,6 @@ public class AdventureResource {
     @GET
     @Path("ping")
     public String ping() {
-        // TODO: This method should return `pong`.
         return "pong";
     }
 
@@ -42,8 +41,13 @@ public class AdventureResource {
     @POST
     @Path("create")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response create() throws AdventureException, IOException {
-        int id = service.newGame();
+    public Response create() throws AdventureException {
+        int id = 0;
+        try {
+            id = service.newGame();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         return getGame(id);
     }
 
@@ -115,6 +119,11 @@ public class AdventureResource {
                 .status(Response.Status.BAD_REQUEST)
                 .entity(new Error("No game found with id '" + id + "'."))
                 .build();
+    }
+    @OPTIONS
+    @Path("instance/{id: \\d+}/command")
+    public Response commandPreflight() {
+        return Response.ok().build();
     }
 
 }

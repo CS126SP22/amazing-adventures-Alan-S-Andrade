@@ -17,7 +17,8 @@ public class GameTest {
     public void setUp() {
         newGame =
                 GameLoader.loadGameFromJsonFile(
-                        "C:\\Users\\Alan\\IdeaProjects\\amazing-adventures-Alan-S-Andrade\\src\\main\\resources\\hogwarts.json");
+                        "C:\\Users\\Alan\\IdeaProjects\\amazing-adventures-Alan-S-Andrade\\src" +
+                                "\\main\\resources\\hogwarts.json");
         gameEngine = new GameEngine(newGame);
     }
 
@@ -66,7 +67,7 @@ public class GameTest {
     // Tests for examine command.
     @Test
     public void testExamineCommandRandomRoom() {
-        gameEngine.setCurrentRoom("Home");
+        gameEngine.setCurrentRoom("Viaduct");
         UserInput userInput = new UserInput("examine");
         String output = userInput.processCommand(gameEngine);
 
@@ -83,9 +84,8 @@ public class GameTest {
         String output = userInput.processCommand(gameEngine);
 
         assertEquals(
-                "You are currently not rich.\n"
-                        + "From here, you can go: [get lottery ticket, get computer, listen to motivational speaker]\n"
-                        + "Items visible: [empty wallet]",
+                "You are in the Viaduct, you hear the water running through.\\nYou " +
+                        "can see the Quidditch Field south from here and the Great Hall to the east.\",",
                 output);
     }
     @Test
@@ -93,40 +93,39 @@ public class GameTest {
         UserInput userInput = new UserInput("examine please");
         String output = userInput.processCommand(gameEngine);
 
-        assertEquals("You are currently not rich.\n"
-                + "From here, you can go: [get lottery ticket, get computer, listen to motivational speaker]\n"
-                + "Items visible: [empty wallet]", output);
+        assertEquals("You are in the Viaduct, you hear the water running through.\\nYou can see the Quidditch" +
+                " Field south from here and the Great Hall to the east.\",", output);
     }
     //Go command tests.
     @Test
     public void testValidGoCommand() {
-        gameEngine.setCurrentRoom("ConvenientStore");
-        UserInput userInput = new UserInput("go check ticket");
+        gameEngine.setCurrentRoom("Owlery");
+        UserInput userInput = new UserInput("take owl");
         String output = userInput.processCommand(gameEngine);
 
-        assertEquals("TicketChecker", gameEngine.getCurrentRoom().getName());
+        assertEquals("Owlery", gameEngine.getCurrentRoom().getName());
         assertEquals(
-                "You just checked your ticket and no surprise, you lost.\n"
-                        + "From here, you can go: [home]\n"
-                        + "Items visible: [ticket scratcher]",
+                "You are in the Owlery." +
+                        " You never now when an Owl might be useful!\nYou can see the Quidditch Field to the east.",
                 output);
     }
     @Test
     public void testInvalidGoCommand() {
-        UserInput userInput = new UserInput("go get booed off the stage");
+        UserInput userInput = new UserInput("go South");
         String output = userInput.processCommand(gameEngine);
 
-        assertEquals("I can't go \"get booed off the stage\"!", output);
+        assertEquals("You are in the Great Hall. Sit down and feast!", output);
     }
     @Test
     public void testGoCommandWinner() {
-        gameEngine.setCurrentRoom("WorkingApp");
-        UserInput userInput = new UserInput("go sell app");
+        gameEngine.setCurrentRoom("Room Of Requirement");
+        UserInput userInput = new UserInput("enter door");
         String output = userInput.processCommand(gameEngine);
 
         assertTrue(gameEngine.isGameOver());
         assertEquals(
-                "Congratulations! You have become rich! You win at life!",
+                "Huzzah! You made it to the secret Room of Requirement.\nYou and" +
+                        " your friends may train here to save Hogwarts.\nCongratulations!",
                 output);
     }
     @Test
@@ -138,29 +137,28 @@ public class GameTest {
     //Take command tests.
     @Test
     public void testValidTakeCommand() {
-        UserInput userInput = new UserInput("take empty wallet");
+        UserInput userInput = new UserInput("take Snitch");
         String output = userInput.processCommand(gameEngine);
         List<Item> inventory = gameEngine.getPlayer().getInventory();
 
-        assertEquals("empty wallet", inventory.get(0).getName());
+        assertEquals("Snitch", inventory.get(0).getName());
         assertEquals("", output);
 
         UserInput newUserInput = new UserInput("examine");
         String secondOutput = newUserInput.processCommand(gameEngine);
 
         assertEquals(
-                "You are currently not rich.\n"
-                        + "From here, you can go: [get lottery ticket, get computer, listen to motivational speaker]",
+                "You are in the Quidditch Field. You can try and catch the snitch!",
                 secondOutput);
     }
     @Test
     public void testInvalidTakeCommandNoItem() {
-        UserInput userInput = new UserInput("take burrito");
+        UserInput userInput = new UserInput("take Frog");
         String output = userInput.processCommand(gameEngine);
         List<Item> inventory = gameEngine.getPlayer().getInventory();
 
         assertEquals(0, inventory.size());
-        assertEquals("There is no item \"burrito\" in the room.", output);
+        assertEquals("There is no item \"Frog\" in the room.", output);
     }
     @Test
     public void testInvalidTakeCommandNoInputItem() {
@@ -174,8 +172,8 @@ public class GameTest {
     // Drop command tests
     @Test
     public void testValidDropCommandSameItemName() {
-        gameEngine.setInventory(new String[] {"burrito", "empty wallet"});
-        UserInput userInput = new UserInput("drop empty wallet");
+        gameEngine.setInventory(new String[] {"Snitch", "Friends"});
+        UserInput userInput = new UserInput("drop snitch");
         String output = userInput.processCommand(gameEngine);
 
         assertEquals(1, gameEngine.getPlayer().getInventory().size());
@@ -185,23 +183,22 @@ public class GameTest {
         String newOutput = newUserInput.processCommand(gameEngine);
 
         assertEquals(
-                "You are currently not rich.\n"
-                        + "From here, you can go: [get lottery ticket, get computer, listen to motivational speaker]\n"
-                        + "Items visible: [empty wallet, empty wallet]",
+                "You are in the Quidditch Field. " +
+                        "Items visible [Snitch, Friends]",
                 newOutput);
     }
     @Test
     public void testInvalidDropCommandNoItem() {
-        gameEngine.setInventory(new String[]{"burrito"});
-        UserInput userInput = new UserInput("drop empty wallet");
+        gameEngine.setInventory(new String[]{"Snitch"});
+        UserInput userInput = new UserInput("drop Owl");
         String output = userInput.processCommand(gameEngine);
 
-        assertEquals("You don't have \"empty wallet\"!", output);
+        assertEquals("You don't have \"Owl\"!", output);
     }
     @Test
     public void testInvalidDropCommandEmptyInventory() {
-        UserInput userInput = new UserInput("drop empty wallet");
+        UserInput userInput = new UserInput("drop Frog");
         String output = userInput.processCommand(gameEngine);
-        assertEquals("You don't have \"empty wallet\"!", output);
+        assertEquals("You don't have \"Frog\"!", output);
     }
 }
